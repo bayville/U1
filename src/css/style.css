@@ -1,0 +1,20 @@
+@import url(normalize.css);  /*Reset CSS*/
+@import url(header.css);
+
+/* Global */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+
+.container--l {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}

@@ -1,0 +1,15 @@
+{
+    "jpeg": {
+      "quality": 90,
+      "chromaSubsampling": "4:4:4"
+    },
+    "avif": {
+      "quality": 90
+    },
+    "webp": {
+      "quality": 90
+    },
+    "png": {
+      "palette": true
+    }
+  }
