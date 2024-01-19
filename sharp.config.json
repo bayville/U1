@@ -4,10 +4,10 @@
       "chromaSubsampling": "4:4:4"
     },
     "avif": {
-      "quality": 60
+      "quality": 65
     },
     "webp": {
-      "quality": 60
+      "quality": 65
     },
     "png": {
       "palette": true
