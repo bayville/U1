@@ -4,7 +4,7 @@
       "chromaSubsampling": "4:4:4"
     },
     "avif": {
-      "quality": 65
+      "quality": 60
     },
     "webp": {
       "quality": 65
