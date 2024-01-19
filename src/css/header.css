@@ -51,8 +51,11 @@ header{
 
 .nav__link--active {
     display: block;
+    font-weight: 700;
+    text-decoration: underline;
     width: 100%;
 }
+
 
 
 /* Menu Button */
@@ -133,12 +136,7 @@ header{
         display: block;
         text-decoration: underline;
     }
-    
-    .nav__link--active {
-        display: block;
-        text-decoration: underline;
-        font-weight: 700;
-        }
+
 
     /* Hide menu button */
     .menu__btn {
