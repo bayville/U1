@@ -1,0 +1,16 @@
+footer{
+    text-align: center;
+    margin-top: auto;
+    background-color:  rgb(47, 47, 47);
+    color: #ffffff;
+    padding-block: 1em;
+}
+
+footer p{
+    margin: auto;
+}
+
+
+footer a{
+    color: #ffffff;
+}
