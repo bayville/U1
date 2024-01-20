@@ -51,24 +51,3 @@ li{
     grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
     gap: 0.5rem;
 }
-
-/* #twoColumn{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-} */
-aside{
-    position: sticky;
-    top: 20%;
-    margin-left: auto;
-    width: fit-content;
-    background-color: lightgrey;
-    height: fit-content;
-    padding: 1em;
-}
-aside ul{
-    margin-bottom: 0;
-    padding-left: 0.5em;
-}
-aside ul>*{
-    list-style: none;
-}
