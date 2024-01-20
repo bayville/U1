@@ -2,8 +2,97 @@
 <html lang="sv">
     <include src="src/includes/head.html"> {"title": "Process"}</include>
     <include src="src/includes/header.html"></include>
-    <main class="container--l">
-        <h1>Process</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ducimus delectus cumque voluptatem nisi voluptatum?</p>
+    <aside>
+        <h2>Innehåll</h2>
+        <ol>
+            <li><a href="#startProject">Start av projekt</a></li>
+            <li>
+                <ul>
+                    <li><a href="#fileTree">Mappstruktur</a></li>
+                </ul>
+            </li>    
+            <li><a href="#version">Verisionshantering</a></li>
+            <li><a href="#developement">Utveckling</a></li>
+        </ol>
+    </aside>
+    <main class="container--l" id="twoColumn">
+        <section>
+            <h1>Process</h1>
+            <h2 id="startProject">Start av projekt</h2>
+            <p>För att starta projektet öppnar jag VSCode, samt öppnar en ny mapp för projektet inne i VSCode.</p>
+            <p>Efter detta körs kommandot "npm init" för att starta ett nytt projekt, vilken bland annat skapar mappen node_modules, filen package-lock.json, samt package.json. </p>
+            <p>När initiering av projektet är slutfört skapas följande mappar/filer:</p>
+            <ul>
+                <li>mappen src</li>
+                <li>filen index.html</li>
+                <li>mappen src/js, innehållande filen main.js</li>
+                <li>mappen src/css, innehållande filen style.css</li>
+                <li>mappen src/img, innehållande en bild för att använda som test</li>
+            </ul>
+            <h3 id="fileTree">Mappstruktur</h3>
+            <pre>
+            <code>+---root
+                -.gitignore
+                -.posthtmlrc
+                -package-lock.json
+                -package.json
+                -sharp.config.json
+                +---.parcel-cache/
+                +---dist/
+                +---node_modules/
+                +---src/
+                    index.html
+                    photos.html
+                    process.html
+                    +---img/
+                        -bild1.jpg
+                        -bild2.jpg
+                        -bild3.jpg
+                        -bild4.jpg
+                        -bild5.jpg
+                        -bild6.jpg
+                    +---includes/
+                        -footer.html
+                        -head.html
+                        -header.html
+                    +---css/
+                        -footer.css
+                        -header.css
+                        -normalize.css
+                        -style.css
+                    +---js/
+                        -main.js
+            </code>
+                </pre>
+            <p>Sen körs kommandot "npm install --save-dev parcel, för att lägga till paketet parcel i projektet.</p>
+            <p>Parcel är ett byggverktyg som bland annat kan minifiera, konkatinera och transpilera JavaScript-kod samt CSS-kod, det går även att komprimera och konvertera bilder till format som t.ex. .avif och .webp.</p>
+            <p>Följande ändringar görs sedan i package.json:</p>
+            <ul>
+                <li>source läggs till och sätts till src/index.html</li>
+                <li>browserslist läggs till för skapa bakåtkompabilitet mot äldre webbläsare.</li>
+                <li>kommandot "start" läggs till för att starta parcel med en webbserver för utveckling</li>
+                <li>kommandot "start" läggs till för att bygga en verision av webbplatsen för publicering</li>
+            </ul>
+            <p>Även paketet posthtml samt pluginet posthtml-include installeras för att ge möjlighet till att bland annat inkludera en HTML-fil i en annan.</p>
+            <p>Det här är något som testast mest för skojs skull, men tanken är att både headern samt footern ligger i en egen HTML-fil, samt inkluderas på alla undersidor. Detta möjliggör att man bara behöver ändra i t.ex. header.html, sedan gäller dessa ändringar på alla undersidor där header.html inkluderas.</p>
+            <h2 id="version">Verisionshantering</h2>
+            <p>För att verisionshantera använder jag mig av git och GitHub. En ny GitHub-repo initieras, sedan skapas en ny branch som heter dev.</p>
+            <p>Den här branchen används under hela utvecklingen för att säkerställa att man inte förstör koden i main, samt att man slipper publicera innehåll som ännu inte är färdigt.</p>
+            <p>En .gitignore fil skapas för att förhindra att .parcel-cache, dist samt node_modules verisionshanteras med git.</p>
+            <p>Git kommandon som används:</p>
+            <ul>
+                <li>git checkout branch dev</li>
+                <li>git checkout branch main</li>
+                <li>git add .</li>
+                <li>git commit -m "meddelande"</li>
+                <li>git merge dev</li>
+                <li>git status</li>
+                <li>git push</li>
+            </ul>
+            <h2 id="developement">Utveckling</h2>
+            <p>För att starta utvecklingen kör jag kommandot npm run start, som är det kommandot som tidigare lades till i package.json.</p>
+        </section>
+
+
     </main>
 <include src="src/includes/footer.html"></include>
